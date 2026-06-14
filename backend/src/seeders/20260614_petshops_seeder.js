@@ -1,0 +1,107 @@
+'use strict';
+
+module.exports = {
+  async up(queryInterface, Sequelize) {
+    await queryInterface.bulkInsert('petshops', [
+      {
+        name: 'Pet Gallery',
+        description: 'Petshop terpercaya dengan berbagai pilihan produk hewan peliharaan',
+        address: 'Jl. Gejayan No. 10',
+        city: 'Sleman',
+        province: 'Yogyakarta',
+        postal_code: '55281',
+        phone: '08123456789',
+        email: 'info@petgallery.com',
+        latitude: -7.7601,
+        longitude: 110.3890,
+        opening_time: '08:00:00',
+        closing_time: '18:00:00',
+        is_active: true,
+        image_url:
+          'https://via.placeholder.com/300x200?text=Pet+Gallery',
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        name: 'Petshop Sejahtera',
+        description: 'Menyediakan makanan dan aksesoris hewan peliharaan berkualitas',
+        address: 'Jl. Sosrowijayan No. 15',
+        city: 'Yogyakarta Kota',
+        province: 'Yogyakarta',
+        postal_code: '55271',
+        phone: '08198765432',
+        email: 'info@petsejahtera.com',
+        latitude: -7.7980,
+        longitude: 110.3689,
+        opening_time: '07:00:00',
+        closing_time: '19:00:00',
+        is_active: true,
+        image_url:
+          'https://via.placeholder.com/300x200?text=Petshop+Sejahtera',
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        name: 'Pet Paradise',
+        description: 'Surga hewan peliharaan dengan layanan grooming profesional',
+        address: 'Jl. Malioboro No. 25',
+        city: 'Yogyakarta Kota',
+        province: 'Yogyakarta',
+        postal_code: '55271',
+        phone: '08555666777',
+        email: 'info@petparadise.com',
+        latitude: -7.7972,
+        longitude: 110.3724,
+        opening_time: '08:30:00',
+        closing_time: '17:30:00',
+        is_active: true,
+        image_url:
+          'https://via.placeholder.com/300x200?text=Pet+Paradise',
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        name: 'Paws & Love',
+        description: 'Toko hewan peliharaan modern dengan harga kompetitif',
+        address: 'Jl. Sudirman No. 5',
+        city: 'Bantul',
+        province: 'Yogyakarta',
+        postal_code: '55713',
+        phone: '08777888999',
+        email: 'info@pawslove.com',
+        latitude: -7.8495,
+        longitude: 110.3688,
+        opening_time: '09:00:00',
+        closing_time: '18:00:00',
+        is_active: true,
+        image_url:
+          'https://via.placeholder.com/300x200?text=Paws+%26+Love',
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        name: 'Furry Friends',
+        description: 'Spesialis makanan premium untuk kucing dan anjing',
+        address: 'Jl. Imogiri No. 88',
+        city: 'Bantul',
+        province: 'Yogyakarta',
+        postal_code: '55714',
+        phone: '08222333444',
+        email: 'info@furryfriends.com',
+        latitude: -7.9162,
+        longitude: 110.3412,
+        opening_time: '08:00:00',
+        closing_time: '17:00:00',
+        is_active: true,
+        image_url:
+          'https://via.placeholder.com/300x200?text=Furry+Friends',
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+    ]);
+  },
+
+  async down(queryInterface, Sequelize) {
+    await queryInterface.bulkDelete('petshops', null, {});
+  },
+};
